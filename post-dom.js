@@ -1,4 +1,5 @@
 const notes = [
+  { name: "Ideas & Life", file: "Ideas_And_Life.md" },
   { name: "About", file: "ABOUT.md" }
 ]
 
@@ -15,7 +16,7 @@ const file_name = document.getElementById("file-name");
 const file_content = document.getElementById("file-content");
 
 notes.forEach(({ name }, i) => {
-  const noteLink = document.createElement("span")
+  const noteLink = document.createElement("div")
   noteLink.innerHTML = name
   noteLink.className = "cursor-pointer"
   noteLink.onclick = () => loadFile(i)
