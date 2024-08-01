@@ -1,0 +1,11 @@
+.headline {
+  border-bottom: 1px solid black;
+}
+
+.fileList {
+  border-right: 1px solid black;
+}
+
+.fileName {
+  border-bottom: 1px solid black;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Notbook Of Dirts</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script defer>
+    const url = new URL(window.location.href)
+    const file = url.searchParams.get("file")
+    fetch(`notes/${file}`)
+      .then(response => response.text())
+      .then(markdown => document.body.innerHTML = marked.parse(markdown))
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

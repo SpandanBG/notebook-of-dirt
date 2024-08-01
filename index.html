@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Notbook Of Dirts</title>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.5"
+    integrity="sha384-xcuj3WpfgjlKF+FXhSQFQ0ZNr39ln+hwjN3npfM9VBnUskLolQAcN80McRIVOPuO"
+    crossorigin="anonymous"></script>
+  <script defer src="post-dom.js"></script>
+</head>
+
+<body>
+  <h1 class="text-4xl text-center mx-12 pb-2 mb-2 headline">Notebook of Dirts</h1>
+  <div class="h-screen relative mx-2">
+    <div class="absolute h-screen w-64 overflow-scroll fileList" id="files">
+    </div>
+
+    <div class="absolute h-screen w-screen ml-64 overflow-scroll" id="current-file">
+      <h1 id="file-name" class="fileName"></h1>
+      <iframe id="file-content" class="h-full w-full"></div>
+    </div>
+  </div>
+</body>
+
+</html>
