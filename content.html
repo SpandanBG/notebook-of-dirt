@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<title>Notbook Of Dirts</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="content-styles.css" />
 
-<head>
-  <title>Notbook Of Dirts</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+		<script defer>
+			const url = new URL(window.location.href)
+			const file = url.searchParams.get('file')
+			fetch(`notes/${file}`)
+				.then((response) => response.text())
+				.then((markdown) => (document.body.innerHTML = marked.parse(markdown)))
+		</script>
+		<style>
+			body {
+				width: 800px;
+				margin: 2rem 6rem;
+				background-color: #ffffff;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+		</style>
+	</head>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script defer>
-    const url = new URL(window.location.href)
-    const file = url.searchParams.get("file")
-    fetch(`notes/${file}`)
-      .then(response => response.text())
-      .then(markdown => document.body.innerHTML = marked.parse(markdown))
-  </script>
-  <style>
-    body {
-      margin: 2rem 6rem;
-    }
-  </style>
-</head>
-
-<body>
-</body>
-
+	<body></body>
 </html>
